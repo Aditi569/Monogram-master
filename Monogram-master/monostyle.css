@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#logo {
+    margin: 10px;
+}
+
+#logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#navbar::before {
+    content: "";
+    background-color: #1a2456;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.55;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+#navbar ul li a {
+    color: #ff8b68;
+    display: block;
+    padding: 10px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #ff501c;
+}
+
+#home {
+    position: relative;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('/assets/asset\ 0.jpeg') no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: #ff8b68;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+#home p {
+    color: #ff8b68;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#products, #products1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 34px 15px;
+}
+
+#products .box, #products1 .box {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 23px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+#products .box img, #products1 .box img {
+    max-height: 380px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+#products .box p, #products1 .box p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1a2456;
+    margin-top: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #navbar ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    #navbar ul li {
+        margin: 10px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    #products .box, #products1 .box {
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #home h1 {
+        font-size: 1.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #navbar ul li {
+        font-size: 1rem;
+    }
+}
